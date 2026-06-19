@@ -20,13 +20,13 @@
   .hero {
     text-align: center;
     padding: 3.5rem 2rem 2.5rem;
-    border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
   }
 
   .eyebrow {
     font-size: 9px;
     letter-spacing: 0.4em;
-    color: #8f3232;
+    color: #b84444;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -46,20 +46,20 @@
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 400;
     line-height: 1.12;
-    color: #f0ebe5;
+    color: #f5f0ec;
     margin-bottom: 0.5rem;
   }
 
   .hero-title em {
     font-style: italic;
-    color: #c8a090;
+    color: #d4b0a0;
   }
 
   .hero-sub {
     font-size: 10px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #4a403d;
+    color: #8a7870;
     margin-top: 0.75rem;
   }
 
@@ -70,28 +70,30 @@
     gap: 2rem;
     margin-top: 2.5rem;
     padding-top: 2rem;
-    border-top: 0.5px solid rgba(255,255,255,0.06);
+    border-top: 0.5px solid rgba(255,255,255,0.08);
   }
 
   .meta-item { text-align: center; }
+
   .meta-label {
     font-size: 8px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #4a403d;
+    color: #7a6a64;
     display: block;
     margin-bottom: 4px;
   }
+
   .meta-value {
     font-size: 11px;
-    color: #8f3232;
+    color: #b84444;
     letter-spacing: 0.08em;
   }
 
   .meta-sep {
     width: 0.5px;
     height: 28px;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.1);
   }
 
   .form-wrap {
@@ -104,7 +106,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
     font-style: italic;
-    color: #6b5a54;
+    color: #b0a098;
     text-align: center;
     margin-bottom: 2.5rem;
     line-height: 1.65;
@@ -121,11 +123,11 @@
 
   label {
     display: block;
-    font-size: 8px;
-    letter-spacing: 0.28em;
+    font-size: 9px;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #5a4f4c;
-    margin-bottom: 6px;
+    color: #a09088;
+    margin-bottom: 7px;
     font-weight: 500;
   }
 
@@ -135,11 +137,11 @@
   select,
   textarea {
     width: 100%;
-    background: rgba(255,255,255,0.03);
-    border: 0.5px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.18);
     color: #f0ebe5;
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     padding: 0.75rem 0.9rem;
     border-radius: 2px;
@@ -150,57 +152,57 @@
   }
 
   input:focus, select:focus, textarea:focus {
-    border-color: rgba(143,50,50,0.5);
-    background: rgba(143,50,50,0.04);
+    border-color: rgba(184,68,68,0.6);
+    background: rgba(184,68,68,0.05);
   }
 
-  input::placeholder, textarea::placeholder { color: #2e2825; }
+  input::placeholder, textarea::placeholder { color: #5a5050; }
 
-  select option { background: #1a1210; }
+  select option { background: #1a1210; color: #f0ebe5; }
 
   input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.3);
+    filter: invert(0.5);
     cursor: pointer;
   }
 
   .ticket-section {
-    border: 0.5px dashed rgba(255,255,255,0.1);
+    border: 0.5px dashed rgba(255,255,255,0.15);
     border-radius: 2px;
     padding: 1.5rem;
     margin-bottom: 1.25rem;
-    background: rgba(255,255,255,0.015);
+    background: rgba(255,255,255,0.02);
   }
 
   .ticket-title {
-    font-size: 8px;
-    letter-spacing: 0.28em;
+    font-size: 9px;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #5a4f4c;
+    color: #a09088;
     margin-bottom: 1rem;
     font-weight: 500;
   }
 
   .ticket-note {
-    font-size: 10px;
-    color: #3a3230;
+    font-size: 11px;
+    color: #7a7070;
     line-height: 1.55;
     margin-top: 0.75rem;
     font-style: italic;
   }
 
   .upload-zone {
-    border: 0.5px dashed rgba(143,50,50,0.35);
+    border: 0.5px dashed rgba(184,68,68,0.5);
     border-radius: 2px;
     padding: 1.75rem;
     text-align: center;
     cursor: pointer;
-    background: rgba(143,50,50,0.025);
+    background: rgba(184,68,68,0.04);
     position: relative;
     transition: background 0.2s;
     margin-top: 1rem;
   }
 
-  .upload-zone:hover { background: rgba(143,50,50,0.06); }
+  .upload-zone:hover { background: rgba(184,68,68,0.08); }
 
   .upload-zone input[type="file"] {
     position: absolute;
@@ -213,20 +215,20 @@
 
   .upload-icon {
     font-size: 22px;
-    color: #5a3030;
+    color: #a06060;
     margin-bottom: 8px;
     display: block;
   }
 
   .upload-text {
-    font-size: 10px;
-    color: #5a4f4c;
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    color: #9a8880;
+    letter-spacing: 0.08em;
   }
 
   .upload-preview {
-    font-size: 10px;
-    color: #8f3232;
+    font-size: 11px;
+    color: #b84444;
     margin-top: 8px;
     display: none;
   }
@@ -236,14 +238,14 @@
     max-height: 120px;
     border-radius: 2px;
     margin-top: 10px;
-    border: 0.5px solid rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.1);
     display: none;
   }
 
   .btn-submit {
     width: 100%;
     background: #8f3232;
-    color: #f0ebe5;
+    color: #f5f0ec;
     border: none;
     font-family: 'Inter', sans-serif;
     font-size: 9px;
@@ -258,23 +260,39 @@
   }
 
   .btn-submit:hover { background: #7a2828; }
-  .btn-submit:disabled { background: #2e1a1a; color: #4a3030; cursor: not-allowed; }
+  .btn-submit:disabled { background: #2e1a1a; color: #6a5050; cursor: not-allowed; }
+  .btn-submit.loading { opacity: 0.6; pointer-events: none; }
 
   .form-note {
-    font-size: 10px;
-    color: #3a3230;
+    font-size: 11px;
+    color: #7a7070;
     text-align: center;
     margin-top: 1.5rem;
     line-height: 1.7;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
   }
 
-  .form-note a {
-    color: #8f3232;
-    text-decoration: none;
+  .form-note a { color: #b84444; text-decoration: none; }
+
+  .field-error {
+    font-size: 10px;
+    color: #c06060;
+    margin-top: 4px;
+    display: none;
   }
 
-  /* Confirmation screen */
+  .field-error.show { display: block; }
+
+  #submit-error {
+    font-size: 11px;
+    color: #c06060;
+    text-align: center;
+    display: none;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Confirmation */
   #confirm-screen {
     display: none;
     text-align: center;
@@ -287,30 +305,30 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    border: 0.5px solid rgba(143,50,50,0.4);
+    border: 0.5px solid rgba(184,68,68,0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 2rem;
     font-size: 20px;
-    color: #8f3232;
+    color: #b84444;
   }
 
   .confirm-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 400;
-    color: #f0ebe5;
+    color: #f5f0ec;
     margin-bottom: 1rem;
   }
 
   .confirm-body {
     font-size: 13px;
-    color: #6b5a54;
+    color: #a09088;
     line-height: 1.75;
   }
 
-  .confirm-body strong { color: #c8a090; font-weight: 400; }
+  .confirm-body strong { color: #d4b0a0; font-weight: 400; }
 
   .confirm-tag {
     display: inline-block;
@@ -318,21 +336,8 @@
     font-size: 8px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #3a3230;
+    color: #5a5050;
   }
-
-  /* Loading state */
-  .btn-submit.loading { opacity: 0.6; pointer-events: none; }
-
-  /* Error message */
-  .field-error {
-    font-size: 10px;
-    color: #c0504a;
-    margin-top: 4px;
-    display: none;
-  }
-
-  .field-error.show { display: block; }
 
   @media (max-width: 480px) {
     .field-row { grid-template-columns: 1fr; }
@@ -423,7 +428,7 @@
       <p class="ticket-note">La foto debe mostrar claramente: fecha, nombre y número de afiliado.</p>
     </div>
 
-    <div id="submit-error" style="font-size:11px; color:#c0504a; text-align:center; display:none; margin-top:1rem;">
+    <div id="submit-error">
       Hubo un error al enviar. Intenta de nuevo o escríbenos directamente al canal.
     </div>
 
@@ -453,20 +458,15 @@
 </div>
 
 <script>
-  // ─── CONFIGURACIÓN ───────────────────────────────────────
-  // Pega aquí tu Web App URL de Google Apps Script (o endpoint propio)
   const ENDPOINT = 'REEMPLAZAR_CON_TU_ENDPOINT';
-  // ─────────────────────────────────────────────────────────
 
-  let ticketFile = null;
   let ticketBase64 = null;
 
   function handleFile(input) {
     if (!input.files || !input.files[0]) return;
-    ticketFile = input.files[0];
-    document.getElementById('upload-name').textContent = ticketFile.name;
+    const file = input.files[0];
+    document.getElementById('upload-name').textContent = file.name;
     document.getElementById('upload-name').style.display = 'block';
-
     const reader = new FileReader();
     reader.onload = (e) => {
       ticketBase64 = e.target.result;
@@ -474,46 +474,37 @@
       preview.src = ticketBase64;
       preview.style.display = 'block';
     };
-    reader.readAsDataURL(ticketFile);
+    reader.readAsDataURL(file);
   }
 
   function validate() {
     let ok = true;
-    const fields = [
-      { id: 'f-nombre', err: 'err-nombre' },
-      { id: 'f-tel',    err: 'err-tel'    },
-      { id: 'f-sucursal', err: 'err-sucursal' },
-      { id: 'f-fecha',  err: 'err-fecha'  },
-      { id: 'f-afiliado', err: 'err-afiliado' },
-    ];
-    fields.forEach(({ id, err }) => {
+    [['f-nombre','err-nombre'],['f-tel','err-tel'],['f-sucursal','err-sucursal'],
+     ['f-fecha','err-fecha'],['f-afiliado','err-afiliado']].forEach(([id, err]) => {
       const val = document.getElementById(id).value.trim();
-      const errEl = document.getElementById(err);
-      if (!val) { errEl.classList.add('show'); ok = false; }
-      else errEl.classList.remove('show');
+      document.getElementById(err).classList.toggle('show', !val);
+      if (!val) ok = false;
     });
-    const ticketErr = document.getElementById('err-ticket');
-    if (!ticketBase64) { ticketErr.classList.add('show'); ok = false; }
-    else ticketErr.classList.remove('show');
+    document.getElementById('err-ticket').classList.toggle('show', !ticketBase64);
+    if (!ticketBase64) ok = false;
     return ok;
   }
 
   async function submitForm() {
     if (!validate()) return;
-
     const btn = document.getElementById('btn-submit');
     btn.classList.add('loading');
     btn.textContent = 'Enviando...';
     document.getElementById('submit-error').style.display = 'none';
 
     const payload = {
-      nombre:   document.getElementById('f-nombre').value.trim(),
-      telefono: document.getElementById('f-tel').value.trim(),
-      sucursal: document.getElementById('f-sucursal').value,
+      nombre:       document.getElementById('f-nombre').value.trim(),
+      telefono:     document.getElementById('f-tel').value.trim(),
+      sucursal:     document.getElementById('f-sucursal').value,
       fecha_ticket: document.getElementById('f-fecha').value,
       num_afiliado: document.getElementById('f-afiliado').value.trim(),
       ticket_imagen: ticketBase64,
-      timestamp: new Date().toISOString(),
+      timestamp:    new Date().toISOString(),
     };
 
     try {
@@ -522,17 +513,13 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
-      if (!res.ok) throw new Error('Server error');
-
-      // Mostrar pantalla de confirmación
+      if (!res.ok) throw new Error();
       document.getElementById('conf-nombre').textContent = payload.nombre;
       document.getElementById('conf-sucursal').textContent = payload.sucursal;
       document.getElementById('main-screen').style.display = 'none';
       document.getElementById('confirm-screen').style.display = 'block';
       window.scrollTo(0, 0);
-
-    } catch (err) {
+    } catch {
       document.getElementById('submit-error').style.display = 'block';
       btn.classList.remove('loading');
       btn.textContent = 'Solicitar mi lugar';
