@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preregistro · Pasarela OI 2026 · SHYLA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0e0a0a;
+    color: #f0ebe5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 3.5rem 2rem 2.5rem;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    color: #b84444;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .logo-wordmark {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.55em;
+    color: #f0ebe5;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 400;
+    line-height: 1.12;
+    color: #f5f0ec;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: #d4b0a0;
+  }
+
+  .hero-sub {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a7870;
+    margin-top: 0.75rem;
+  }
+
+  .meta-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 0.5px solid rgba(255,255,255,0.08);
+  }
+
+  .meta-item { text-align: center; }
+
+  .meta-label {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7a6a64;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .meta-value {
+    font-size: 11px;
+    color: #b84444;
+    letter-spacing: 0.08em;
+  }
+
+  .meta-sep {
+    width: 0.5px;
+    height: 28px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .form-wrap {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .form-intro {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #b0a098;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.65;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .field { margin-bottom: 1.25rem; }
+
+  label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #a09088;
+    margin-bottom: 7px;
+    font-weight: 500;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.18);
+    color: #f0ebe5;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0.75rem 0.9rem;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: rgba(184,68,68,0.6);
+    background: rgba(184,68,68,0.05);
+  }
+
+  input::placeholder, textarea::placeholder { color: #5a5050; }
+
+  select option { background: #1a1210; color: #f0ebe5; }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+  }
+
+  .ticket-section {
+    border: 0.5px dashed rgba(255,255,255,0.15);
+    border-radius: 2px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .ticket-title {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #a09088;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .ticket-note {
+    font-size: 11px;
+    color: #7a7070;
+    line-height: 1.55;
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+
+  .upload-zone {
+    border: 0.5px dashed rgba(184,68,68,0.5);
+    border-radius: 2px;
+    padding: 1.75rem;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(184,68,68,0.04);
+    position: relative;
+    transition: background 0.2s;
+    margin-top: 1rem;
+  }
+
+  .upload-zone:hover { background: rgba(184,68,68,0.08); }
+
+  .upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .upload-icon {
+    font-size: 22px;
+    color: #a06060;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .upload-text {
+    font-size: 11px;
+    color: #9a8880;
+    letter-spacing: 0.08em;
+  }
+
+  .upload-preview {
+    font-size: 11px;
+    color: #b84444;
+    margin-top: 8px;
+    display: none;
+  }
+
+  .img-preview {
+    max-width: 100%;
+    max-height: 120px;
+    border-radius: 2px;
+    margin-top: 10px;
+    border: 0.5px solid rgba(255,255,255,0.1);
+    display: none;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: #8f3232;
+    color: #f5f0ec;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    padding: 1.1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background 0.2s, opacity 0.2s;
+  }
+
+  .btn-submit:hover { background: #7a2828; }
+  .btn-submit:disabled { background: #2e1a1a; color: #6a5050; cursor: not-allowed; }
+  .btn-submit.loading { opacity: 0.6; pointer-events: none; }
+
+  .form-note {
+    font-size: 11px;
+    color: #7a7070;
+    text-align: center;
+    margin-top: 1.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+
+  .form-note a { color: #b84444; text-decoration: none; }
+
+  .field-error {
+    font-size: 10px;
+    color: #c06060;
+    margin-top: 4px;
+    display: none;
+  }
+
+  .field-error.show { display: block; }
+
+  #submit-error {
+    font-size: 11px;
+    color: #c06060;
+    text-align: center;
+    display: none;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Confirmation */
+  #confirm-screen {
+    display: none;
+    text-align: center;
+    padding: 5rem 2rem;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .confirm-ring {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(184,68,68,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 20px;
+    color: #b84444;
+  }
+
+  .confirm-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #f5f0ec;
+    margin-bottom: 1rem;
+  }
+
+  .confirm-body {
+    font-size: 13px;
+    color: #a09088;
+    line-height: 1.75;
+  }
+
+  .confirm-body strong { color: #d4b0a0; font-weight: 400; }
+
+  .confirm-tag {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #5a5050;
+  }
+
+  @media (max-width: 480px) {
+    .field-row { grid-template-columns: 1fr; }
+    .meta-strip { gap: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="main-screen">
+  <div class="hero">
+    <p class="eyebrow">Preregistro · Acceso exclusivo</p>
+    <p class="logo-wordmark">S &nbsp; H &nbsp; Y &nbsp; L &nbsp; A</p>
+    <h1 class="hero-title">Pasarela <em>Otoño · Invierno</em><br>2026</h1>
+    <p class="hero-sub">Colección oficial · Por invitación</p>
+    <div class="meta-strip">
+      <div class="meta-item">
+        <span class="meta-label">Fecha</span>
+        <span class="meta-value">29 de julio, 2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Sede</span>
+        <span class="meta-value">Gran Hotel · CDMX</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Lugares</span>
+        <span class="meta-value">Limitados</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <p class="form-intro">Completa tu solicitud de asistencia.<br>Te confirmaremos tu lugar por WhatsApp.</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="f-nombre">Nombre completo</label>
+        <input type="text" id="f-nombre" placeholder="Tu nombre completo" />
+        <div class="field-error" id="err-nombre">Campo requerido</div>
+      </div>
+      <div class="field">
+        <label for="f-tel">Teléfono WhatsApp</label>
+        <input type="tel" id="f-tel" placeholder="55 0000 0000" />
+        <div class="field-error" id="err-tel">Campo requerido</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="f-sucursal">Sucursal SHYLA</label>
+      <select id="f-sucursal">
+        <option value="" disabled selected>Selecciona tu sucursal</option>
+        <option>Izazaga PA</option>
+        <option>Izazaga PB</option>
+        <option>Vallejo</option>
+        <option>Aragón</option>
+        <option>Puebla</option>
+        <option>Toluca Centro</option>
+        <option>Toluca Price Shoes</option>
+      </select>
+      <div class="field-error" id="err-sucursal">Selecciona una sucursal</div>
+    </div>
+
+    <div class="ticket-section">
+      <p class="ticket-title">Último ticket de compra</p>
+      <div class="field-row">
+        <div class="field" style="margin-bottom:0">
+          <label for="f-fecha">Fecha del ticket</label>
+          <input type="date" id="f-fecha" />
+          <div class="field-error" id="err-fecha">Campo requerido</div>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="f-afiliado">Número de afiliado</label>
+          <input type="text" id="f-afiliado" placeholder="AF-00000" />
+          <div class="field-error" id="err-afiliado">Campo requerido</div>
+        </div>
+      </div>
+
+      <div class="upload-zone" id="upload-zone">
+        <input type="file" id="f-ticket" accept="image/*" onchange="handleFile(this)" />
+        <span class="upload-icon">↑</span>
+        <div class="upload-text">Toca para subir foto del ticket</div>
+        <div class="upload-preview" id="upload-name"></div>
+        <img class="img-preview" id="img-preview" alt="Vista previa del ticket" />
+      </div>
+      <div class="field-error" id="err-ticket">Sube una foto del ticket</div>
+      <p class="ticket-note">La foto debe mostrar claramente: fecha, nombre y número de afiliado.</p>
+    </div>
+
+    <div id="submit-error">
+      Hubo un error al enviar. Intenta de nuevo o escríbenos directamente al canal.
+    </div>
+
+    <button class="btn-submit" id="btn-submit" onclick="submitForm()">
+      Solicitar mi lugar
+    </button>
+
+    <p class="form-note">
+      Tu solicitud será revisada por el equipo SHYLA.<br>
+      Recibirás confirmación por WhatsApp.<br><br>
+      Canal oficial ·
+      <a href="https://whatsapp.com/channel/0029Vb65cxl2ZjCwnTVBoh2d" target="_blank">Novedades SHYLA</a>
+    </p>
+  </div>
+</div>
+
+<div id="confirm-screen">
+  <div class="confirm-ring">✓</div>
+  <h2 class="confirm-title">Solicitud recibida</h2>
+  <p class="confirm-body">
+    Gracias, <strong id="conf-nombre"></strong>.<br><br>
+    Registramos tu solicitud desde <strong id="conf-sucursal"></strong>.<br>
+    Revisaremos tu ticket y te enviaremos la confirmación de asistencia por WhatsApp.<br><br>
+    Revisa el canal para más novedades de la pasarela.
+  </p>
+  <span class="confirm-tag">Pasarela OI 2026 · 29 de julio · Gran Hotel CDMX</span>
+</div>
+
+<script>
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwRvs-0HU6-nPbmtGMr5cHy4CMZgz-dgJFrzf_4jXlmuiTUIZTHhKvFVbOWhxGmKwgm/exec';
+
+  let ticketBase64 = null;
+
+  function handleFile(input) {
+    if (!input.files || !input.files[0]) return;
+    const file = input.files[0];
+    document.getElementById('upload-name').textContent = file.name;
+    document.getElementById('upload-name').style.display = 'block';
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      ticketBase64 = e.target.result;
+      const preview = document.getElementById('img-preview');
+      preview.src = ticketBase64;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function validate() {
+    let ok = true;
+    [['f-nombre','err-nombre'],['f-tel','err-tel'],['f-sucursal','err-sucursal'],
+     ['f-fecha','err-fecha'],['f-afiliado','err-afiliado']].forEach(([id, err]) => {
+      const val = document.getElementById(id).value.trim();
+      document.getElementById(err).classList.toggle('show', !val);
+      if (!val) ok = false;
+    });
+    document.getElementById('err-ticket').classList.toggle('show', !ticketBase64);
+    if (!ticketBase64) ok = false;
+    return ok;
+  }
+
+  async function submitForm() {
+    if (!validate()) return;
+    const btn = document.getElementById('btn-submit');
+    btn.classList.add('loading');
+    btn.textContent = 'Enviando...';
+    document.getElementById('submit-error').style.display = 'none';
+
+    const payload = {
+      nombre:       document.getElementById('f-nombre').value.trim(),
+      telefono:     document.getElementById('f-tel').value.trim(),
+      sucursal:     document.getElementById('f-sucursal').value,
+      fecha_ticket: document.getElementById('f-fecha').value,
+      num_afiliado: document.getElementById('f-afiliado').value.trim(),
+      ticket_imagen: ticketBase64,
+      timestamp:    new Date().toISOString(),
+    };
+
+    try {
+      await fetch(ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      // no-cors no permite leer response, asumimos éxito si no hay excepción
+      document.getElementById('conf-nombre').textContent = payload.nombre;
+      document.getElementById('conf-sucursal').textContent = payload.sucursal;
+      document.getElementById('main-screen').style.display = 'none';
+      document.getElementById('confirm-screen').style.display = 'block';
+      window.scrollTo(0, 0);
+    } catch {
+      document.getElementById('submit-error').style.display = 'block';
+      btn.classList.remove('loading');
+      btn.textContent = 'Solicitar mi lugar';
+    }
+  }
+</script>
+</body>
+</html>
